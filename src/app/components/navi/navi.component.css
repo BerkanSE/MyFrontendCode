@@ -1,0 +1,11 @@
+/* .arkaplan-rengi{
+    background:#5a6079!important;
+   } */
+.navbar-custom .navbar-brand ,
+.navbar-custom .navbar-text {
+    color:yellow;
+}
+ .navbar-custom .navbar-nav .nav-link {
+    color:yellowgreen;
+}
+
