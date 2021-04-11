@@ -10,7 +10,7 @@ import { ListResponseModel } from '../models/listResponseModel';
 })
 export class BrandService {
 
-  apiUrl = "https://localhost:44382/api/brands/getall";
+  apiUrl:string = "https://localhost:44382/api/brands/getall";
 
   constructor(private httpClient:HttpClient) { }
 

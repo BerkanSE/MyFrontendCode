@@ -1,9 +1,38 @@
-<ul   class="list-group">
-    <li [class]="getAllBrandClass()" routerLink = "/cars">Tüm Araçlar</li>
-    <li (click)="setCurrentBrand(brand)" 
-    routerLink = "/cars/brand/{{brand.brandId}}"
-    *ngFor = "let brand of brands" 
-    [class]="getCurrentBrandClass(brand)">{{brand.brandName}}</li>
-</ul>
+<!-- <div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-primary d-flex mx-auto"
+  role="status"
+>
+  <span class="visually-hidden">Loading...</span>
+</div>
 
-<h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz</h5>
+<ul *ngIf="dataLoaded == true" class="list-group list-group-flush">
+  <li
+    [class]="getAllBrandClass()"
+    routerLink="/car"
+    (click)="resetCurrentBrand()"
+  >
+    Tüm Marka Seçenekleri
+  </li>
+
+  <li
+    (click)="setCurrentBrand(brand)"
+    routerLink="/car/brand/{{ brand.brandId }}"
+    *ngFor="let brand of brands"
+    [class]="getCurrentBrandClass(brand)"
+    class="list-group-item list-group-item-secondary"
+  >
+    {{ brand.brandName }}
+  </li>
+</ul>
+ -->
+
+ <li class="leftmenu-list"><a href="javascript:void(0)">Markalar <i class="fas fa-minus"></i></a>
+  <div class="brands-submenu">
+                          <ul>
+                              <li (click)="setCurrentBrand(brand)" [class]=getCurrentBrandClass(brand)
+                              *ngFor="let brand of brands" routerLink="/cars/brand/{{brand.brandId}}" 
+                              ><span>{{brand.brandName}}</span></li>
+                          </ul>
+  </div>
+</li>

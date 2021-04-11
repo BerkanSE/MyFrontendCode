@@ -1,0 +1,12 @@
+<div *ngIf="dataLoaded==false" class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+
+<ul *ngIf="dataLoaded == true"  class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-secondary active">Tüm Müşteriler</li>
+    <li
+    *ngFor = "let customer of customers" 
+    class="list-group-item list-group-item-secondary">{{customer.companyName}}</li>
+</ul>
+<!-- <h5 *ngIf = "currentCustomer">{{currentCustomer.companyName}} seçildi</h5> -->
