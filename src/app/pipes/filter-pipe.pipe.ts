@@ -8,10 +8,10 @@ import { CarDetails } from '../models/carDetails';
 })
 export class FilterPipePipe implements PipeTransform {
 
-  transform(value: Car[], filterText: string): Car[] {
+  transform(value: CarDetails[], filterText: string): CarDetails[] {
     filterText = filterText? filterText.toLocaleLowerCase():""
     return filterText?value
-    .filter((c:Car)=>c.carName.toLocaleLowerCase().indexOf(filterText)!==-1)
+    .filter((c:CarDetails)=>c.carName.toLocaleLowerCase().indexOf(filterText)!==-1)
     :value;
   }
 

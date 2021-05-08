@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { RentalDetails } from 'src/app/models/rentalDetails';
 import { RentalService } from 'src/app/services/rental.service';
 
@@ -30,6 +31,7 @@ export class RentalComponent implements OnInit {
     return rental.userName;
   }
 
+  
   
 
 }

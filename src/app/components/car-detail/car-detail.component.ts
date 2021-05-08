@@ -8,6 +8,7 @@ import { CarImage } from 'src/app/models/carImage';
 import { CarDetailsService } from 'src/app/services/car-details.service';
 import { CarImageService } from 'src/app/services/car-image.service';
 import { CartService } from 'src/app/services/cart.service';
+import { RentalService } from 'src/app/services/rental.service';
 
 
 @Component({
@@ -31,7 +32,8 @@ export class CarDetailComponent implements OnInit {
 
   constructor(private carDetailsService:CarDetailsService,
     private carImageService:CarImageService,
-    private activatedRoute:ActivatedRoute) { }
+    private activatedRoute:ActivatedRoute,
+    private rentalService:RentalService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
@@ -58,6 +60,7 @@ export class CarDetailComponent implements OnInit {
       this.carImg=response.data;
     })
   }
+
 
    /* prevBtn(){
     let countCarImg=this.carImg.length-1;

@@ -1,83 +1,75 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">RentCar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <app-cart-summary></app-cart-summary>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+<div class="container">
+  <header>
+    <div class="top">
+      <div class="container">
+            <ul class="pull-right">
+              <li><a href="#">Linkedin</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Berkan Senger</a></li>
+            </ul>
       </div>
     </div>
-</nav> -->
-
-<header>
-  <div class="top">
-    <div class="container">
-          <ul class="pull-right">
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Berkan Senger</a></li>
+    
+    <nav class="navbar navbar-expand-lg  navbar-light ">
+      <div class="container">
+    
+        <a class="navbar-brand" href="#">
+          <img src="/assets/img/logo3.png" alt="Brand image" width="170" height="23">
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#">ANASAYFA</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="#">ARAÇ KİRALAMA</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cars" >ARAÇLAR</a>
+            </li>
+    
+            <li class="nav-item dropdown">
+              <a 
+              class="nav-link dropdown-toggle " 
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+               >EKLEME SERVİSİ</a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <li>
+                   <a class="dropdown-item" routerLink="/brands/add"><h6>Marka Ekle</h6></a>
+                 </li>
+                 <li>
+                   <a class="dropdown-item" routerLink="/colors/add"><h6>Renk Ekle</h6></a>
+                 </li>
+                 <li>
+                   <a class="dropdown-item" routerLink="/cars/operation/add"><h6>Araç Ekle</h6></a>
+                 </li>
+                 <li>
+                  <a class="dropdown-item" routerLink="/images/operation/add"><h6>Fotoğraf Ekle</h6></a>
+                </li>
+               </ul>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link " href="#" >KURUMSAL</a>
+            </li>
+            
+    
           </ul>
-    </div>
-  </div>
-  
-  <nav class="navbar navbar-expand-lg  navbar-light ">
-    <div class="container">
-  
-      <a class="navbar-brand" href="#">
-        <img src="/assets/img/logo3.png" alt="" width="170" height="23">
-      </a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-  
-          <li class="nav-item">
-            <a class="nav-link" href="#">ANASAYFA</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" href="#">ARAÇ KİRALAMA</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/cars" >ARAÇLAR</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link " href="#" >HİZMET VE SERVİSLER</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link " href="#" >KURUMSAL</a>
-          </li>
-  
-  
-  
-        </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!--<div class="breadcrumb-box">
-    <div class="b-title"></div>
-  </div>
-  <p *ngIf="!isHomePage()">Breadcrumb</p>-->
-  </header>
+    </nav>
+    </header>
+
+</div>

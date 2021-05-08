@@ -1,80 +1,42 @@
-<!--  <div *ngIf = "dataLoaded==false" class="spinner-border text-warning" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
- -->
-  <!-- <div class="mb-3">
-    <label for="filterText" class="form-label">Araç ara</label>
-    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText"
-     placeholder="arama ifadesi giriniz">
-  </div>
-
-  <div *ngIf="filterText.length>2" class="aler alert-secondary">
-    {{filterText}} aradınız
-  </div>
-
-  <table *ngIf="dataLoaded==true" class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Marka Id</th>
-            <th>Color Id</th>
-            <th>Araç Adı</th>
-            <th>Model Yılı</th>
-            <th>Günlük Fiyatı</th>
-            <th>Kdv'li Fiyatı</th>
-            <th>Açıklama</th>
-            <th></th>
-            
-            
-        </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let car of cars | filterPipe:filterText">
-        <td>{{car.carId}}</td>
-        <td>{{car.brandId}}</td> 
-        <td>{{car.colorId}}</td>
-        <td>{{car.carName | uppercase}}</td>
-        <td>{{car.modelYear}}</td>
-        <td>{{car.dailyPrice | currency }}</td>
-        <td>{{car.dailyPrice | vatAdded:10 | currency}}</td>
-        <td>{{car.description}}</td>
+<section class="banner" id="top">
+  <div  class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="banner-caption">
+          
+          <h2><b>Best Finder For You</b></h2>
+          <span id="banneraciklama"><b>En iyi araç kiralama şirketi olarak sizlerin yanınızdayız...</b></span>
+        </div>
+      </div>
+    
+    
+    
+      <div class="my-3" id="ara">
+        <i class="fas fa-search fa-2x"></i>    
+        <label  for="filterText" class="form-label ms-2 fs-4 fw-bolder 1h-lg">Araç Ara</label>
+        <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="B · Rent a Car'da Araç Ara...">
         
-        <td><button (click)="addToCart(car)" type="button" class="btn btn-success">Sepete ekle</button></td>
-        <td>
-          <button  routerLink="car/{{car.carId}}" style="background-color: rgb(201, 241, 119);" class="btn btn-outline-success" >Detaylar..</button>
-        </td>
-    </tr>
-    </tbody>
-</table>  -->
+      </div>
+      <div id="ara2" *ngIf="filterText.length>2" class="aler alert-secondary">
+        {{filterText}} aradınız
+      </div>
+      
 
-<!-- <div class="mt-3">
-  <h6 class="text-primary">Tüm Araçlar</h6>
-  <select  class="form-select" [(ngModel)]="currentCar">
-    <option>Araç Seçiniz</option>
-    <option *ngFor="let car of cars" [ngValue]="car">
-      {{car.brandName}}  {{ car.carName }}
-    </option>
-  </select>
-  <button
-  *ngIf="currentCar"
-    routerLink="/car/{{car.carId}}"
-    type="button"
-    class="btn btn-secondary mt-3"
-  >
-    Filtrele
-  </button>
-  <button routerLink="/car" type="button" class="btn btn-secondary mt-3 ms-2 ">
-    Filtreyi Temizle
-  </button>
-</div>
-<br> -->
+    </div>
 
-<div class="container">
+    
+  </div>
+
+
+</section>
+
+<div  class="container">
 	<div class="row clearfix">
 		<div id="cars-left-menu" class="col-xs-12 col-sm-12 col-md-3">
 			<ul>
 				<app-brand></app-brand>
 				<app-color></app-color>
+        
 			</ul>
 		</div>
 
@@ -85,8 +47,9 @@
                 <span class="visually-hidden"></span>
               </div>
             </div>
-      <div class="row">
-        <div *ngFor="let car of cars" class="card text-dark bg-light mb-2" style="max-width: 22rem;">
+
+      <div *ngIf="dataLoaded==true" class="row">
+        <div *ngFor="let car of cars | filterPipe:filterText" class="card text-dark bg-light mb-2" style="max-width: 22rem;">
           <img src="{{ApiUr}}{{car.imagePath}}" class="card-img-top" alt="thumbnail" width="100" height="200">
           <div class="card-body" >
               <h4 class="car-name txt">{{ car.carName }}</h4>
@@ -95,10 +58,10 @@
           <ul class="list-group list-group-flush">
               <li class="list-group-item" >MARKA : {{car.brandName}}</li>
               <li class="list-group-item" >RENK : {{car.colorName}}</li>
-              <li class="list-group-item">Günlük Fiyatı : {{car.dailyPrice}} TL</li>
+              <li class="list-group-item">Günlük Fiyatı : {{car.dailyPrice}} ₺</li>
           </ul>
           <div class="card-body">
-              <a class="car-btn" routerLink="/car/{{car.carId}}" >MODELİ DETAYLI İNCELE</a>
+              <a class="car-btn" routerLink="/cars/{{car.carId}}" >MODELİ DETAYLI İNCELE</a>
           </div>
           
         </div>

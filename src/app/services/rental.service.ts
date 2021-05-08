@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { RentalDetails } from '../models/rentalDetails';
+import { ResponseModel } from '../models/responseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,13 @@ export class RentalService {
   constructor(private httpClient:HttpClient) { }
 
   getRentalsDetails():Observable<ListResponseModel<RentalDetails>>{
-    return this.httpClient.get<ListResponseModel<RentalDetails>>(this.apiUrl)
+    let newPath = this.apiUrl + "rentals/getrentaldetails";
+    return this.httpClient.get<ListResponseModel<RentalDetails>>(newPath)
+  }
+
+  add(rental:RentalDetails):Observable<ResponseModel>{
+    let newPath = this.apiUrl + "rentals/add";
+    return this.httpClient.post<ResponseModel>(this.apiUrl,rental)
   }
 
 

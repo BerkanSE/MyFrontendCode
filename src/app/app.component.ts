@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //Component Declaration
@@ -7,14 +7,27 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title:string = 'MyReCapProject';
   user: string ="Berkan Senger";
+ 
+  private isDark = false;
+ 
   //Tek tırnak veya çift tırnak farketmez
+ 
   constructor(private router:Router){ }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
 
+  // }
+
+  @HostBinding('class')
+  get themeMode() {
+    return this.isDark? 'theme-dark' : 'theme-light';
+  }
+
+  switchMode(isDarkMode : boolean){
+    this.isDark = isDarkMode;
   }
 
 }

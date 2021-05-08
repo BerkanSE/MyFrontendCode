@@ -1,38 +1,22 @@
-<!-- <div
-  *ngIf="dataLoaded == false"
-  class="spinner-border text-primary d-flex mx-auto"
-  role="status"
->
-  <span class="visually-hidden">Loading...</span>
-</div>
 
-<ul *ngIf="dataLoaded == true" class="list-group list-group-flush">
-  <li
-    [class]="getAllBrandClass()"
-    routerLink="/car"
-    (click)="resetCurrentBrand()"
+
+<div class="mt-3">
+  <h6 class="leftmenu-list">Markalar</h6>
+  <select class="form-select" aria-label=".form-select example" [(ngModel)]="currentBrand" >
+    <option selected disabled value="">Marka Seçiniz</option>
+    <option *ngFor="let brand of brands" [ngValue]="brand">
+      {{ brand.brandName }}
+    </option>
+  </select>
+  <button
+  *ngIf="currentBrand"
+    routerLink="/cars/brand/{{ currentBrand.brandId }}"
+    type="button"
+    class="btn btn-secondary mt-3"
   >
-    Tüm Marka Seçenekleri
-  </li>
-
-  <li
-    (click)="setCurrentBrand(brand)"
-    routerLink="/car/brand/{{ brand.brandId }}"
-    *ngFor="let brand of brands"
-    [class]="getCurrentBrandClass(brand)"
-    class="list-group-item list-group-item-secondary"
-  >
-    {{ brand.brandName }}
-  </li>
-</ul>
- -->
-
- <li class="leftmenu-list"><a href="javascript:void(0)">Markalar <i class="fas fa-minus"></i></a>
-  <div class="brands-submenu">
-                          <ul>
-                              <li (click)="setCurrentBrand(brand)" [class]=getCurrentBrandClass(brand)
-                              *ngFor="let brand of brands" routerLink="/cars/brand/{{brand.brandId}}" 
-                              ><span>{{brand.brandName}}</span></li>
-                          </ul>
-  </div>
-</li>
+    Filtrele
+  </button>
+  <button routerLink="/cars" type="button" class="btn btn-secondary mt-3 ms-0">
+    Filtreyi Temizle
+  </button>
+</div> 

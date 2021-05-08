@@ -31,10 +31,11 @@ export class CarDetailsService {
     return this.httpClient.get<ListResponseModel<CarDetails>>(newPath);
   }
 
-  /* getCarsDetailsByColorIdandBrandId(brandId:number,colorId:number):Observable<ListResponseModel<CarDetails>>{
-    let newPath = this.apiUrl + "cars/getdetailbybrandandcolorid?brandId="+brandId +"&colorId="+colorId
-    return this.httpClient.get<ListResponseModel<CarDetails>>(newPath)
-  } */
+   getCarsDetailsByColorIdandBrandId(brandId:number,colorId:number):Observable<ListResponseModel<CarDetails>>{
+    let newPath = this.apiUrl + "cars/getdetailbybrandandcolorid?brandId="+brandId +"&colorId="+colorId;
+    return this.httpClient.get<ListResponseModel<CarDetails>>(newPath); 
+    
+  } 
 
   /* getCarByCarId(carId:number):Observable<ListResponseModel<Car>>{
     let newPath = this.apiUrl + "cars/getcarbycarid?carId="+carId
