@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
+## Images
+
+Car List
+
+![Project images](https://github.com/BerkanSE/MyFrontendCode/blob/master/src/assets/img/2021-10-02%2023_35_05-Window.png)
+
+Navbar Menu
+
+![Project images](https://github.com/BerkanSE/MyFrontendCode/blob/master/src/assets/img/2021-10-02%2023_35_49-Window.png)
+
+Footer
+
+![Project images](https://github.com/BerkanSE/MyFrontendCode/blob/master/src/assets/img/2021-10-02%2023_33_04-Window.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
