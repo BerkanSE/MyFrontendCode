@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Images
 
+Project Banner 
+
 ![Project Banner](https://github.com/BerkanSE/MyFrontendCode/blob/master/src/assets/img/RentACarBanner.gif)
 
 Car List
