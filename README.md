@@ -2,11 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
+Proje adı: <br>
+B· Rent a Car👇🏼
+
 ## Images
 
 Project Banner 
 
 ![Project Banner](https://github.com/BerkanSE/MyFrontendCode/blob/master/src/assets/img/RentACarBanner.gif)
+
+Kodlama.io ile paralel yürütülen "Nitelikli Yazılım Geliştirici Yetiştirme Kampı" sonunda bitirme projesi olarak Rent A Car adlı uygulamayı geliştirdim. Projenin içerisinde farklı kullanıcı tipeleri ve bu kullanıcı tiplerine göre belli özellikler barındırmaktadır.
 
 Car List
 
